@@ -5,21 +5,21 @@
 class Extract < Formula
   desc "file extractor"
   homepage "https://github.com/terencendabereye/util-extract"
-  version "0.1.11"
+  version "0.1.12"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.11/util-enable_Darwin_arm64.tar.gz"
-      sha256 "6e33feee2bf1a026faace36b919e11e1f8b32c1bc36b204161915ae1d8fc6014"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.12/util-enable_Darwin_arm64.tar.gz"
+      sha256 "21a9f00d2df9b020a747455ffe851a30c88409fe55c5fab6e9c698b4cd2e10e6"
 
       def install
         bin.install "extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.11/util-enable_Darwin_x86_64.tar.gz"
-      sha256 "02c57fed31af7140f282f36a8bbbe1fe0d403b1f1aefccac53b2ee0f7efef511"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.12/util-enable_Darwin_x86_64.tar.gz"
+      sha256 "2224b42197652e72ec9f2bbb333a49f7b8b9680f0f3d89df6f662331d5f73b4b"
 
       def install
         bin.install "extract"

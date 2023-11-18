@@ -5,20 +5,20 @@
 class Extract < Formula
   desc "file extractor"
   homepage "https://github.com/terencendabereye/util-extract"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Darwin_arm64.tar.gz"
-      sha256 "b2535ea2e509c182696539d0cf380465834f34248885fc788315af987b8a1841"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.1/file-extraction-utility_Darwin_arm64.tar.gz"
+      sha256 "5bb8858969f330b285e0ecde9ae865316bcc115fba5d676980fb9231eefb7340"
 
       def install
         bin.install "extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Darwin_x86_64.tar.gz"
-      sha256 "bdf8d40f7e9904e91a5333c05a2a8c8e44c6c846e1c6365bbb922dfd1e07317f"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.1/file-extraction-utility_Darwin_x86_64.tar.gz"
+      sha256 "b95e9c529540fda1a1c961f61f91de4544f50816e81c610b0540a9a3f5d05579"
 
       def install
         bin.install "extract"
@@ -28,16 +28,16 @@ class Extract < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Linux_arm64.tar.gz"
-      sha256 "3dad77cb4f765ca0f03cd143ee932a8458869f92645c926a89ca10edbaa612c9"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.1/file-extraction-utility_Linux_arm64.tar.gz"
+      sha256 "367d8bae9cb7046950771bc924ec6b9a7f21400e0608d8aa622ac075702facdf"
 
       def install
         bin.install "extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Linux_x86_64.tar.gz"
-      sha256 "4fb29823097e0a5322632028b1295ef17f485ffb686a67873a245a8408145e06"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.1/file-extraction-utility_Linux_x86_64.tar.gz"
+      sha256 "e36c67e346d014e394f9275beb30d9b25eb4c8c19a2d9224b172047df411694c"
 
       def install
         bin.install "extract"

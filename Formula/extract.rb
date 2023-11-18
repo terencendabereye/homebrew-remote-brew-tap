@@ -5,21 +5,39 @@
 class Extract < Formula
   desc "file extractor"
   homepage "https://github.com/terencendabereye/util-extract"
-  version "0.1.14"
-  depends_on :macos
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.14/util-enable_Darwin_arm64.tar.gz"
-      sha256 "d81f55ac17e5482256efc1748d17a24ef137775953d9e1787abad13ff8cca048"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Darwin_arm64.tar.gz"
+      sha256 "b2535ea2e509c182696539d0cf380465834f34248885fc788315af987b8a1841"
 
       def install
         bin.install "extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.14/util-enable_Darwin_x86_64.tar.gz"
-      sha256 "6bfbd35b6309ef37ad220a9d2b4d147b1cc100d42fad8e9cad705918c4fae44e"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Darwin_x86_64.tar.gz"
+      sha256 "bdf8d40f7e9904e91a5333c05a2a8c8e44c6c846e1c6365bbb922dfd1e07317f"
+
+      def install
+        bin.install "extract"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Linux_arm64.tar.gz"
+      sha256 "3dad77cb4f765ca0f03cd143ee932a8458869f92645c926a89ca10edbaa612c9"
+
+      def install
+        bin.install "extract"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.0/util-enable_Linux_x86_64.tar.gz"
+      sha256 "4fb29823097e0a5322632028b1295ef17f485ffb686a67873a245a8408145e06"
 
       def install
         bin.install "extract"

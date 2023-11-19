@@ -5,40 +5,30 @@
 class Extract < Formula
   desc "file extractor"
   homepage "https://github.com/terencendabereye/util-extract"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.3/file-extraction-utility_Darwin_arm64.tar.gz"
-      sha256 "f3fa5c97748abb59face8b445390c93dbd75b7fa09f0a4f7c9b3ccc0d7ca6bd5"
+    url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.4/file-extraction-utility_Darwin_all.tar.gz"
+    sha256 "9b3ec07ba1a2583cd414c6f16ad906bace99d731591f6f0545273faf4e98c8b7"
 
-      def install
-        bin.install "extract"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.3/file-extraction-utility_Darwin_x86_64.tar.gz"
-      sha256 "2b5c3295fce88c93027a619ea060d19e08db962783a48b236c62816e387b0d5b"
-
-      def install
-        bin.install "extract"
-      end
+    def install
+      bin.install "file-extraction-utility"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.3/file-extraction-utility_Linux_arm64.tar.gz"
-      sha256 "4edaf1661d3cc7c7ba1c8e907bcc2fa311d49ddc630e73213e822b0de7e41e4d"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.4/file-extraction-utility_Linux_arm64.tar.gz"
+      sha256 "3747a1e29dd1e372dc79a00c9585541ba74d6ec1d90b9277b92b436b70bd7f87"
 
       def install
         bin.install "extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.3/file-extraction-utility_Linux_x86_64.tar.gz"
-      sha256 "d904f0eed4c673b65efc314c9a0564c3f34be3800d68be9e3f69e84f97a632c5"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.4/file-extraction-utility_Linux_x86_64.tar.gz"
+      sha256 "1b97f731d00bdb664b6cb59185062bdbd5b930533e735ec93f28137351a2ed35"
 
       def install
         bin.install "extract"

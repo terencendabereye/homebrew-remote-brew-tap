@@ -5,30 +5,30 @@
 class Extract < Formula
   desc "file extractor"
   homepage "https://github.com/terencendabereye/util-extract"
-  version "0.2.4"
+  version "0.2.5"
   license "MIT"
 
   on_macos do
-    url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.4/file-extraction-utility_Darwin_all.tar.gz"
-    sha256 "9b3ec07ba1a2583cd414c6f16ad906bace99d731591f6f0545273faf4e98c8b7"
+    url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.5/file-extraction-utility_Darwin_all.tar.gz"
+    sha256 "6ae3adcd899aec2865f48a2a2fb753f3132172ea26bde80068d49332beaae87c"
 
     def install
-      bin.install "file-extraction-utility"
+      bin.install "extract"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.4/file-extraction-utility_Linux_arm64.tar.gz"
-      sha256 "3747a1e29dd1e372dc79a00c9585541ba74d6ec1d90b9277b92b436b70bd7f87"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.5/file-extraction-utility_Linux_arm64.tar.gz"
+      sha256 "6ef76d1979d7534e785694d4eae3a693ddc3aee79b55693ad131d77c936ed8e8"
 
       def install
         bin.install "extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.4/file-extraction-utility_Linux_x86_64.tar.gz"
-      sha256 "1b97f731d00bdb664b6cb59185062bdbd5b930533e735ec93f28137351a2ed35"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.2.5/file-extraction-utility_Linux_x86_64.tar.gz"
+      sha256 "dde5c970d6089203e2d34998d9c2451df58af74ca2108de084c5701015ba89c9"
 
       def install
         bin.install "extract"
